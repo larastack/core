@@ -1,6 +1,6 @@
 {
     "name": "larastack/core",
-    "description": "",
+    "description": "Core foundation for the Larastack platform.",
     "authors": [
         {
             "name": "Carl Weis",
@@ -13,10 +13,11 @@
     },
     "autoload": {
         "classmap": [
-            "src/migrations"
+            "src/migrations",
+            "src/seeds"
         ],
-        "psr-0": {
-            "Larastack\\Core\\": "src/"
+        "psr-4": {
+            "Larastack\\": "src/"
         }
     },
     "minimum-stability": "stable"

@@ -18,7 +18,11 @@ class CoreServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
+		// setup package and namespace
 		$this->package('larastack/core', 'larastack');
+
+		// load the routes
+		require(__DIR__.'/routes.php');
 	}
 
 	/**
@@ -28,7 +32,11 @@ class CoreServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		// load bindings
+		require(__DIR__ .'/bindings.php');
+
+		// loads the view composers
+		require(__DIR__ .'/composers.php');
 	}
 
 	/**
